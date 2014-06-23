@@ -19,5 +19,6 @@ omni_web_sam
 omni_web_srm
 omni_web_util
 omni_assets
+omni_migrations
 omni_config_all
 omni_config_extras
