@@ -1,5 +1,6 @@
 mvc
 rest
+wsgi
 service_http_file
 service_http_colony
 service_http_starter
