@@ -2,5 +2,6 @@ entity_sqlite
 hive_site
 hive_blog
 hive_openid
+colony_site
 cronus_config_all
 cronus_config_hive
