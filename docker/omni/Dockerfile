@@ -3,6 +3,8 @@ MAINTAINER Hive Solutions
 
 ADD colony.json /colony.json
 
+VOLUME /data:/data
+
 RUN apt-get update
 RUN apt-get install -y -q python python-setuptools wget rsync
 RUN apt-get install -y -q python-dev libmysqlclient-dev libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
