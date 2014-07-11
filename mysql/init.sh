@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [ ! -d /data/mysql ]; then  
+    mkdir /data/mysql
+    cp -rp /var/lib/mysql /data/mysql
+fi
+
+rm -rf /var/lib/mysql
+ln -s /data/mysql /var/lib/mysql
+
 /usr/bin/mysqld_safe > /dev/null 2>&1 &
 
 RET=1
