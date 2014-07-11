@@ -10,5 +10,5 @@ RUN cp -R my.cnf /etc/mysql/my.cnf && rm my.cnf
 RUN /init.sh && rm init.sh
 RUN rm -f Dockerfile
 
-CMD ["usr/bin/mysqld_safe"]
-ENTRYPOINT ["bin/true", "&&", "source", "data/omni.env", "&&"]
+CMD usr/bin/mysqld_safe
+ENTRYPOINT data/exec
