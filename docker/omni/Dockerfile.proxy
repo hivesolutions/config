@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
-VOLUME /data:/data
+VOLUME /data
 
 RUN apt-get update
 RUN apt-get install -y -q python python-setuptools wget
