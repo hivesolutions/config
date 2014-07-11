@@ -7,4 +7,5 @@ RUN easy_install pip && pip install netius
 RUN wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
 RUN rm -f Dockerfile
 
-CMD usr/bin/python /proxy.py
+CMD ["usr/bin/python", "proxy.py"]
+ENTRYPOINT ["bin/true", "&&", "source", "data/omni.env", "&&"]

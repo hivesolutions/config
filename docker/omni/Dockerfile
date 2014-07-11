@@ -15,5 +15,5 @@ run rsync -a ~/.colony/meta/omni_assets_config/ ~/.colony/ && rm ~/.colony/spec.
 RUN mkdir -p /usr/share/fonts/truetype/calibri && cp ~/.colony/meta/omni_assets_config/extra/fonts/calibri/* /usr/share/fonts/truetype/calibri
 RUN rm -f Dockerfile
 
-CMD ["usr/local/bin/colony"]
-ENTRYPOINT ["bin/true", "&&", "source", "data/omni.env", "&&"]
+CMD usr/local/bin/colony
+ENTRYPOINT bin/true && source data/omni.env &&
