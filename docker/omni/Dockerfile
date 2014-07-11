@@ -16,4 +16,4 @@ RUN mkdir -p /usr/share/fonts/truetype/calibri && cp ~/.colony/meta/omni_assets_
 RUN rm -f Dockerfile
 
 CMD ["usr/local/bin/colony"]
-ENTRYPOINT ["bin/echo", "-n", "&&", "source", "data/omni.env", "&&"]
+ENTRYPOINT ["bin/true", "&&", "source", "data/omni.env", "&&"]
