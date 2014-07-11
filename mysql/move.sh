@@ -3,7 +3,7 @@
 
 if [ ! -d /data/mysql ]; then  
     mkdir /data/mysql
-    cp -rp /var/lib/mysql /data/mysql
+    cp -rp /var/lib/mysql/* /data/mysql
 fi
 
 rm -rf /var/lib/mysql
