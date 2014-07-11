@@ -1,0 +1,6 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+
+ENV_FILE=${ENV_FILE-omni.env}
+source $ENV_FILE
+$1 "${@:2}"
