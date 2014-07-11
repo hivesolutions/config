@@ -1,8 +1,6 @@
 FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
-VOLUME /data
-
 RUN apt-get update
 RUN apt-get install -y -q python python-setuptools wget
 RUN easy_install pip && pip install netius
