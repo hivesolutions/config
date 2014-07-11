@@ -15,7 +15,7 @@ if __name__ == "__main__":
                 "http://172.17.42.1:8282",
                 "http://172.17.42.1:8383",
             )
-        )
+        ),
     )
     server = netius.extra.ReverseProxyServer(regex = regex)
     server.serve(env = True)
