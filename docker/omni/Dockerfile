@@ -6,7 +6,7 @@ ADD colony.json /colony.json
 RUN apt-get update
 RUN apt-get install -y -q python python-setuptools wget rsync
 RUN apt-get install -y -q python-dev libmysqlclient-dev libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
-RUN easy_install pip && pip install colony mysql-python pillow reportlab crypto pytz pushi netius
+RUN easy_install pip && pip install colony mysql-python pillow reportlab pycrypto pytz pushi netius
 RUN wget https://github.com/hivesolutions/config/raw/master/colony/base.txt
 RUN wget https://github.com/hivesolutions/config/raw/master/colony/omni.txt
 RUN cpm require base.txt && cpm require omni.txt
