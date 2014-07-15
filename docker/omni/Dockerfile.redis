@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
 RUN apt-get update
-RUN apt-get install -y -q redis-server
+RUN apt-get install -y -q redis-server wget
 RUN wget https://github.com/hivesolutions/config/raw/master/redis/redis.conf
 RUN cp -R redis.conf etc/redis/redis.conf && rm redis.conf
 RUN rm -f Dockerfile
