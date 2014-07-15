@@ -13,4 +13,4 @@ if [ ! -L /data/mysql ]; then
 
 fi
 
-/usr/bin/mysqld_safe
+/usr/bin/mysqld_safe "$@"
