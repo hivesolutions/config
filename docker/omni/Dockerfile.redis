@@ -7,4 +7,4 @@ RUN wget https://github.com/hivesolutions/config/raw/master/redis/redis.conf
 RUN cp -R redis.conf etc/redis/redis.conf && rm redis.conf
 RUN rm -f Dockerfile
 
-ENTRYPOINT usr/bin/redis-server etc/redis/redis.conf
+ENTRYPOINT ./redis_link etc/redis/redis.conf
