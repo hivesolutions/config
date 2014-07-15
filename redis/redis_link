@@ -1,0 +1,16 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+
+if [ ! -L /data/redis ]; then
+
+    if [ ! -d /data/redis ]; then  
+        mkdir /data/redis
+        cp -rp /var/lib/redis/* /data/redis
+    fi
+
+    rm -rf /var/lib/redis
+    ln -s /data/redis /var/lib/redis
+
+fi
+
+/usr/bin/redis-server "$@"
