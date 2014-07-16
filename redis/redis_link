@@ -5,9 +5,6 @@ if [ ! -L /data/redis ]; then
 
     if [ ! -d /data/redis ]; then  
         mkdir /data/redis
-        if [ -d //var/lib/redis ]; then
-            cp -rp /var/lib/redis/* /data/redis
-        fi
     fi
 
     rm -rf /var/lib/redis
