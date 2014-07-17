@@ -13,3 +13,4 @@ if [ ! -L /data/redis ]; then
 fi
 
 exec /usr/bin/redis-server "$@"
+exit $?

@@ -14,3 +14,4 @@ if [ ! -L /data/mysql ]; then
 fi
 
 exec /usr/bin/mysqld_safe "$@"
+exit $?
