@@ -11,4 +11,4 @@ RUN cp -R my.cnf etc/mysql/my.cnf && rm my.cnf
 RUN ./init.sh && rm init.sh
 RUN rm -f Dockerfile
 
-ENTRYPOINT ./mysqld_link
+ENTRYPOINT ["./mysqld_link"]

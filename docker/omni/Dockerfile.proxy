@@ -10,4 +10,4 @@ RUN cpm install omni_assets
 RUN wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
 RUN rm -f Dockerfile
 
-ENTRYPOINT usr/bin/python proxy.py
+ENTRYPOINT ["usr/bin/python", "proxy.py"]
