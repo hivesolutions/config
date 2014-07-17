@@ -12,4 +12,4 @@ if [ ! -L /data/redis ]; then
 
 fi
 
-/usr/bin/redis-server "$@"
+exec /usr/bin/redis-server "$@"
