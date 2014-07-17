@@ -9,4 +9,4 @@ RUN cpm require base.txt
 RUN rm base.txt
 RUN rm -f Dockerfile
 
-CMD usr/local/bin/colony
+CMD ["usr/local/bin/colony"]
