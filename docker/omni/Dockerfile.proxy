@@ -6,6 +6,6 @@ ADD colony.json /colony.json
 RUN apt-get update && apt-get install -y -q python python-setuptools wget
 RUN easy_install pip && pip install netius colony
 RUN cpm install omni_assets
-RUN wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
+RUN bin/bash wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
 
 ENTRYPOINT ["usr/bin/python", "proxy.py"]
