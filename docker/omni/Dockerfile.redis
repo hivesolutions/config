@@ -9,4 +9,4 @@ RUN chmod 755 redis_link
 RUN cp -R redis.conf etc/redis/redis.conf && rm redis.conf
 RUN rm -f Dockerfile
 
-ENTRYPOINT ./redis_link etc/redis/redis.conf
+ENTRYPOINT ["./redis_link", "etc/redis/redis.conf"]
