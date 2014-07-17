@@ -3,7 +3,7 @@
 
 if [ ! -L /data/redis ]; then
 
-    if [ ! -d /data/redis ]; then  
+    if [ ! -d /data/redis ]; then
         mkdir /data/redis
     fi
 
