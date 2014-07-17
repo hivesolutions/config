@@ -3,4 +3,4 @@
 
 ENV_FILE=${ENV_FILE-data/omni.env}
 source $ENV_FILE
-$1 "${@:2}"
+exec $1 "${@:2}"
