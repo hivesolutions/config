@@ -1,7 +1,7 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
-/usr/bin/mysqld_safe > /dev/null 2>&1 &
+/usr/bin/mysqld_safe
 
 RET=1
 while [[ $RET -ne 0 ]]; do
