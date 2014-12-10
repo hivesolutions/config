@@ -1,13 +1,13 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
-/usr/bin/mysqld_safe
+/usr/bin/mysqld_safe > /dev/null 2>&1 &
 
 RET=1
 while [[ $RET -ne 0 ]]; do
     echo "=> Waiting for confirmation of MySQL service startup ($RET)"
     sleep 5
-    mysql -uroot -e "status"
+    mysql -uroot -e "status" > /dev/null 2>&1
     RET=$?
 done
 
