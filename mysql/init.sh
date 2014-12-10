@@ -7,7 +7,7 @@ RET=1
 while [[ $RET -ne 0 ]]; do
     echo "=> Waiting for confirmation of MySQL service startup ($RET)"
     sleep 5
-    mysql -uroot -e "status" > /dev/null 2>&1
+    mysql -uroot -e "status"
     RET=$?
 done
 
