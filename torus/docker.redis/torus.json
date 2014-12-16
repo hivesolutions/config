@@ -1,0 +1,8 @@
+{
+    "build" : "build.sh",
+    "start" : "docker start redis",
+    "stop" : "docker stop redis",
+    "depends" : [
+        "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
+    ]
+}
