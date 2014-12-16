@@ -1,9 +1,8 @@
 {
-    "build" : "http://blablasd.com/build.sh",
-    "destroy" : "http://blablasd.com/destroy.sh",
-
-    "config" : "http://blablasd.com/config.env",
+    "build" : "build.sh",
+    "start" : "docker start mysql",
+    "stop" : "docker stop mysql",
     "depends" : [
-        "http://blablasd.com/docker.json"
+        "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ]
 }
