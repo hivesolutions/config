@@ -1,0 +1,9 @@
+{
+    "build" : "http://blablasd.com/build.sh",
+    "destroy" : "http://blablasd.com/destroy.sh",
+
+    "config" : "http://blablasd.com/config.env",
+    "depends" : [
+        "http://blablasd.com/docker.json"
+    ]
+}
