@@ -1,0 +1,8 @@
+{
+    "build" : "build.sh",
+    "start" : "docker start mariadb",
+    "stop" : "docker stop mariadb",
+    "depends" : [
+        "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
+    ]
+}
