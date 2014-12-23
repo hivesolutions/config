@@ -8,19 +8,23 @@
     "config" : [
         {
             "name" : "MARIADB_HOST",
-            "default" : "172.17.42.1"
+            "default" : "172.17.42.1",
+            "persist" : true
         },
         {
             "name" : "MARIADB_PORT",
-            "default" : "3306"
+            "default" : "3306",
+            "persist" : true
         },
         {
             "name" : "MARIADB_USERNAME",
-            "default" : ""
+            "default" : "",
+            "persist" : true
         },
         {
             "name" : "MARIADB_PASSWORD",
-            "default" : ""
+            "default" : "",
+            "persist" : true
         }
     ]
 }
