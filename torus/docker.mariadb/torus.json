@@ -4,5 +4,23 @@
     "stop" : "docker stop mariadb",
     "depends" : [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
+    ],
+    "config" : [
+        {
+            "name" : "MARIADB_HOST",
+            "default" : "172.17.42.1"
+        },
+        {
+            "name" : "MARIADB_PORT",
+            "default" : "3306"
+        },
+        {
+            "name" : "MARIADB_USERNAME",
+            "default" : ""
+        },
+        {
+            "name" : "MARIADB_PASSWORD",
+            "default" : ""
+        }
     ]
 }
