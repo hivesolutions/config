@@ -3,5 +3,7 @@
 
 set -e +h
 
-echo "Hello World"
+MESSAGE=${MESSAGE-Hello World}
+
+echo "$MESSAGE"
 env
