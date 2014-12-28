@@ -5,5 +5,4 @@ set -e +h
 
 MESSAGE=${MESSAGE-Hello World}
 
-echo "$MESSAGE"
-env
+echo "Build with '$MESSAGE'"
