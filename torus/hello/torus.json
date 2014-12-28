@@ -1,7 +1,6 @@
 {
     "build" : "build.sh",
-    "start" : "echo 'start $MESSAGE'",
-    "stop" : "echo 'stop $MESSAGE'",
+    "start" : "echo $MESSAGE",
     "config" : [
         {
             "name" : "MESSAGE",
