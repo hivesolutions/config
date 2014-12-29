@@ -5,4 +5,4 @@ set -e +h
 
 apt-get update
 apt-get -y install python-pip
-pip install utilis
+pip install --upgrade utilis
