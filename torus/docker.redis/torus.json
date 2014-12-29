@@ -5,5 +5,27 @@
     "stop" : "docker stop redis",
     "depends" : [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
+    ],
+    "config" : [
+        {
+            "name" : "REDIS_HOST",
+            "default" : "172.17.42.1",
+            "persist" : true
+        },
+        {
+            "name" : "REDIS_PORT",
+            "default" : "6379",
+            "persist" : true
+        },
+        {
+            "name" : "REDIS_USERNAME",
+            "default" : "",
+            "persist" : true
+        },
+        {
+            "name" : "REDIS_PASSWORD",
+            "default" : "",
+            "persist" : true
+        }
     ]
 }
