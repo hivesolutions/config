@@ -3,6 +3,6 @@
 
 set -e +h
 
-docker stop self/mysql
-docker rm self/mysql
-docker rmi mysql
+docker stop mysql
+docker rm mysql
+docker rmi self/mysql
