@@ -1,5 +1,6 @@
 {
     "build" : "build.sh",
+    "destroy" : "destroy.sh",
     "start" : "docker start redis",
     "stop" : "docker stop redis",
     "depends" : [
