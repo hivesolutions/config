@@ -1,4 +1,4 @@
 {
     "build" : "build.sh",
-    "build" : "destroy.sh"
+    "destroy" : "destroy.sh"
 }
