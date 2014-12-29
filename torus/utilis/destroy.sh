@@ -3,4 +3,4 @@
 
 set -e +h
 
-pip install remove utilis
+pip uninstall utilis
