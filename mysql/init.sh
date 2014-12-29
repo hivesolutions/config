@@ -11,19 +11,25 @@ while [[ $RET -ne 0 ]]; do
     RET=$?
 done
 
-PASS=$(pwgen -s 12 1)
+GEN=$(pwgen -s 12 1)
+USER=${MYSQL_USER-admin}
+PASS=${MYSQL_PASSWORD-$GEN}
 
-echo "=> Creating MySQL admin user with random password"
+if [ "$PASS" == "$GEN" ]; then 
+    echo "=> Creating MySQL $USER user with random password"
+else
+    echo "=> Using provided MySQL $USER user and password"
+fi
 
-mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY '$PASS'"
-mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION"
+mysql -uroot -e "CREATE USER '$USER'@'%' IDENTIFIED BY '$PASS'"
+mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO '$USER'@'%' WITH GRANT OPTION"
 
 echo "=> Done!"
 
 echo "========================================================================"
 echo "You can now connect to this MySQL Server using:"
 echo ""
-echo "    mysql -uadmin -p$PASS -h<host> -P<port>"
+echo "    mysql -u$USER -p$PASS -h<host> -P<port>"
 echo ""
 echo "Please remember to change the above password as soon as possible!"
 echo "MySQL user 'root' has no password but only allows local connections"
