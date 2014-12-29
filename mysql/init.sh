@@ -18,7 +18,7 @@ PASS=${MYSQL_PASSWORD-$GEN}
 if [ "$PASS" == "$GEN" ]; then 
     echo "=> Creating MySQL $USER user with random password"
 else
-    echo "=> Using provided MySQL $USER user and password"
+    echo "=> Using provided MySQL user ($USER) and password"
 fi
 
 mysql -uroot -e "CREATE USER '$USER'@'%' IDENTIFIED BY '$PASS'"
