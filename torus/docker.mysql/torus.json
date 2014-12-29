@@ -1,5 +1,6 @@
 {
     "build" : "build.sh",
+    "destroy" : "destroy.sh",
     "start" : "docker start mysql",
     "stop" : "docker stop mysql",
     "depends" : [
