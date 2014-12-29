@@ -11,4 +11,4 @@ wget https://github.com/hivesolutions/config/raw/master/docker/redis/Dockerfile
 docker build --no-cache -t self/redis .
 cd .. && rm -rf redis
 
-docker run --name redis -p $REDIS_HOST:$REDIS_PORT:$REDIS_PORT -v /data:/data -i -t self/redis
+docker run --name redis -p $REDIS_HOST:$REDIS_PORT:$REDIS_PORT -v /data:/data -i -t -d self/redis
