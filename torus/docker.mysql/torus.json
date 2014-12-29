@@ -5,5 +5,27 @@
     "stop" : "docker stop mysql",
     "depends" : [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
+    ],
+    "config" : [
+        {
+            "name" : "MYSQL_HOST",
+            "default" : "172.17.42.1",
+            "persist" : true
+        },
+        {
+            "name" : "MYSQL_PORT",
+            "default" : "3306",
+            "persist" : true
+        },
+        {
+            "name" : "MYSQL_USERNAME",
+            "default" : "",
+            "persist" : true
+        },
+        {
+            "name" : "MYSQL_PASSWORD",
+            "default" : "",
+            "persist" : true
+        }
     ]
 }
