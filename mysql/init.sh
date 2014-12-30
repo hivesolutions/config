@@ -12,7 +12,7 @@ while [[ $RET -ne 0 ]]; do
 done
 
 GEN=$(pwgen -s 12 1)
-USER=${MYSQL_USER-admin}
+USER=${MYSQL_USERNAME-admin}
 PASS=${MYSQL_PASSWORD-$GEN}
 
 if [ "$PASS" == "$GEN" ]; then 
