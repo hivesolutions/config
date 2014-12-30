@@ -1,6 +1,6 @@
 {
     "build" : "build.sh",
-    "build" : "destroy.sh",
+    "destroy" : "destroy.sh",
     "start" : "docker start mariadb",
     "stop" : "docker stop mariadb",
     "depends" : [
