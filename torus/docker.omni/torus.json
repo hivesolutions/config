@@ -59,7 +59,7 @@
         },
         {
             "name" : "REDISTOGO_URL",
-            "default" : "redis://root:root@172.17.42.1",
+            "default" : "redis://172.17.42.1",
             "persist" : true
         },
         {
