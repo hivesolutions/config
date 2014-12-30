@@ -18,7 +18,7 @@ FS=${FS-/data/fs/default}
 SESSION_PATH=${SESSION_PATH-/data/session}
 
 cd /data/features/omni
-wget https://github.com/hivesolutions/config/raw/master/docker/omni/data/exec
+rm -rf exec && wget https://github.com/hivesolutions/config/raw/master/docker/omni/data/exec
 chmod 755 exec
 
 mkdir omni && cd omni
