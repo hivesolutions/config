@@ -25,4 +25,8 @@ context colony.json.tpl > colony.json && rm colony.json.tpl
 docker build --no-cache -t self/omni .
 cd .. && rm -rf omni
 
+if [ "$DB_ENGINE" == "mysql" ]; then
+    mysql -uroot -e "CREATE SCHEMA IF NOT EXISTS '$DB_NAME'" 
+fi
+
 docker run --name omni -p $OMNI_HOST:443:443 -v /data:/data -i -t -d self/omni
