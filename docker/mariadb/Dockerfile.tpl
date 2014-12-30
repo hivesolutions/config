@@ -6,6 +6,11 @@ ENV MARIADB_PORT {{ MARIADB_PORT }}
 ENV MARIADB_USERNAME {{ MARIADB_USERNAME }}
 ENV MARIADB_PASSWORD {{ MARIADB_PASSWORD }}
 
+ENV MYSQL_HOST {{ MARIADB_HOST }}
+ENV MYSQL_PORT {{ MARIADB_PORT }}
+ENV MYSQL_USERNAME {{ MARIADB_USERNAME }}
+ENV MYSQL_PASSWORD {{ MARIADB_PASSWORD }}
+
 RUN apt-get update && apt-get install -y -q software-properties-common
 RUN apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 RUN add-apt-repository "deb http://mirrors.fe.up.pt/pub/mariadb/repo/10.0/ubuntu trusty main"
