@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
+ENV HOME /
+
 ENV SERVER {{ SERVER }}
 ENV RUN_MODE {{ RUN_MODE }}
 ENV REPO_USERNAME {{ REPO_USERNAME }}
