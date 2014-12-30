@@ -19,12 +19,12 @@
         },
         {
             "name" : "MYSQL_USERNAME",
-            "default" : "",
+            "default" : "admin",
             "persist" : true
         },
         {
             "name" : "MYSQL_PASSWORD",
-            "default" : "",
+            "default" : "admin",
             "persist" : true
         }
     ]

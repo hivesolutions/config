@@ -19,12 +19,12 @@
         },
         {
             "name" : "MARIADB_USERNAME",
-            "default" : "",
+            "default" : "admin",
             "persist" : true
         },
         {
             "name" : "MARIADB_PASSWORD",
-            "default" : "",
+            "default" : "admin",
             "persist" : true
         }
     ]
