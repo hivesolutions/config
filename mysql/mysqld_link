@@ -5,7 +5,7 @@ if [ ! -L /data/mysql ]; then
 
     if [ ! -d /data/mysql ]; then
         mkdir /data/mysql
-        chown messagebus:fuse /data/mysql
+        chown mysql:mysql /data/mysql
         cp -rp /var/lib/mysql/* /data/mysql
     fi
 
