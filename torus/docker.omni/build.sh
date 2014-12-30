@@ -17,10 +17,6 @@ REDISTOGO_URL=${REDISTOGO_URL-redis://root:root@172.17.42.1}
 FS=${FS-/data/fs/default}
 SESSION_PATH=${SESSION_PATH-/data/session}
 
-cd /data/features/omni
-rm -rf exec && wget https://github.com/hivesolutions/config/raw/master/docker/omni/data/exec
-chmod 755 exec
-
 mkdir omni && cd omni
 wget https://github.com/hivesolutions/config/raw/master/docker/omni/Dockerfile.tpl -O Dockerfile.tpl
 context Dockerfile.tpl > Dockerfile && rm Dockerfile.tpl
