@@ -26,6 +26,8 @@ docker build --no-cache -t self/omni .
 cd .. && rm -rf omni
 
 if [ "$DB_ENGINE" == "mysql" ]; then
+    apt-get update
+    apt-get -y install mysql-client
     mysql -uroot -e "CREATE SCHEMA IF NOT EXISTS '$DB_NAME'" 
 fi
 
