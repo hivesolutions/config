@@ -16,16 +16,6 @@
             "name" : "REDIS_PORT",
             "default" : "6379",
             "persist" : true
-        },
-        {
-            "name" : "REDIS_USERNAME",
-            "default" : "",
-            "persist" : true
-        },
-        {
-            "name" : "REDIS_PASSWORD",
-            "default" : "",
-            "persist" : true
         }
     ]
 }
