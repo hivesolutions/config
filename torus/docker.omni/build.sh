@@ -28,7 +28,7 @@ cd .. && rm -rf omni
 if [ "$DB_ENGINE" == "mysql" ]; then
     apt-get update
     apt-get -y install mysql-client
-    mysql -uroot -e "CREATE SCHEMA IF NOT EXISTS '$DB_NAME'" 
+    mysql -u$DB_USER -p$DB_PASSWORD -h$DB_HOST -e "CREATE SCHEMA IF NOT EXISTS $DB_NAME"
 fi
 
 docker run --name omni -p $OMNI_HOST:443:443 -v /data:/data -i -t -d self/omni
