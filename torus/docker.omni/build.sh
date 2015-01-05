@@ -25,6 +25,8 @@ context colony.json.tpl > colony.json && rm colony.json.tpl
 docker build --no-cache -t self/omni .
 cd .. && rm -rf omni
 
+mkdir -p /data/fs
+
 if [ "$DB_ENGINE" == "mysql" ]; then
     apt-get update
     apt-get -y install mysql-client
