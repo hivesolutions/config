@@ -1,0 +1,21 @@
+{
+    "build" : "build.sh",
+    "destroy" : "destroy.sh",
+    "start" : "docker start take_the_bill",
+    "stop" : "docker stop take_the_bill",
+    "depends" : [
+        "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
+    ],
+    "config" : [
+        {
+            "name" : "OMNI_URL",
+            "default" : "https://172.17.42.1/",
+            "persist" : true
+        },
+        {
+            "name" : "OMNI_OPEN_URL",
+            "default" : "https://172.17.42.1/",
+            "persist" : true
+        }
+    ]
+}
