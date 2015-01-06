@@ -3,6 +3,6 @@
 
 set -e +h
 
-docker stop omni
-docker rm omni
-docker rmi self/omni
+docker stop take_the_bill
+docker rm take_the_bill
+docker rmi self/take_the_bill
