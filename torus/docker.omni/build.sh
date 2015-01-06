@@ -4,6 +4,10 @@
 set -e +h
 
 SERVER=${SERVER-netius}
+OMNI_HOST=${OMNI_HOST-0.0.0.0}
+OMNI_PORT=${OMNI_PORT-8080}
+SERVER_ENCODING=${SERVER_ENCODING-gzip}
+SERVER_SSL=${SERVER_SSL-1}
 RUN_MODE=${RUN_MODE-omni}
 REPO_USERNAME=${REPO_USERNAME-root}
 REPO_PASSWORD=${REPO_PASSWORD-root}
@@ -33,4 +37,14 @@ if [ "$DB_ENGINE" == "mysql" ]; then
     mysql -u$DB_USER -p$DB_PASSWORD -h$DB_HOST -e "CREATE SCHEMA IF NOT EXISTS $DB_NAME"
 fi
 
-docker run --name omni -p $OMNI_HOST:443:443 -v /data:/data -i -t -d self/omni
+docker run \
+--name omni \
+-e HOST=0.0.0.0 \
+-e PORT=$OMNI_PORT \
+-e SERVER_ENCODING=$SERVER_ENCODING \
+-e SERVER_SSL=$SERVER_SSL \
+-e PREFIX=/mvc \
+-e ALIAS_PATH=/.colony/meta/omni_assets_config/extra/alias.json \
+-p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT \
+-v /data:/data \
+-i -t -d self/omni usr/local/bin/colony_wsgi

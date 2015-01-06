@@ -13,6 +13,26 @@
             "persist" : true
         },
         {
+            "name" : "OMNI_HOST",
+            "default" : "0.0.0.0",
+            "persist" : true
+        },
+        {
+            "name" : "OMNI_PORT",
+            "default" : "8080",
+            "persist" : true
+        },
+        {
+            "name" : "SERVER_ENCODING",
+            "default" : "gzip",
+            "persist" : true
+        },
+        {
+            "name" : "SERVER_SSL",
+            "default" : "1",
+            "persist" : true
+        },
+        {
             "name" : "RUN_MODE",
             "default" : "omni",
             "persist" : true
