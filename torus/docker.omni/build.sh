@@ -41,8 +41,6 @@ docker run \
 --name omni \
 -e HOST=0.0.0.0 \
 -e PORT=$OMNI_PORT \
--e SERVER_ENCODING=$SERVER_ENCODING \
--e SERVER_SSL=$SERVER_SSL \
 -e PREFIX=/mvc \
 -e ALIAS_PATH=/.colony/meta/omni_assets_config/extra/alias.json \
 -p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT \
