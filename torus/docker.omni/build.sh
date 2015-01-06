@@ -6,8 +6,8 @@ set -e +h
 SERVER=${SERVER-netius}
 OMNI_HOST=${OMNI_HOST-0.0.0.0}
 OMNI_PORT=${OMNI_PORT-8080}
+OMNI_SSL=${OMNI_SSL-1}
 SERVER_ENCODING=${SERVER_ENCODING-gzip}
-SERVER_SSL=${SERVER_SSL-1}
 RUN_MODE=${RUN_MODE-omni}
 REPO_USERNAME=${REPO_USERNAME-root}
 REPO_PASSWORD=${REPO_PASSWORD-root}
@@ -41,6 +41,7 @@ docker run \
 --name omni \
 -e HOST=0.0.0.0 \
 -e PORT=$OMNI_PORT \
+-e SSL=$OMNI_SSL \
 -e PREFIX=/mvc \
 -e ALIAS_PATH=/.colony/meta/omni_assets_config/extra/alias.json \
 -p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT \

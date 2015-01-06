@@ -14,7 +14,7 @@
         },
         {
             "name" : "OMNI_HOST",
-            "default" : "0.0.0.0",
+            "default" : "172.17.42.1",
             "persist" : true
         },
         {
@@ -23,13 +23,13 @@
             "persist" : true
         },
         {
-            "name" : "SERVER_ENCODING",
-            "default" : "gzip",
+            "name" : "OMNI_SSL",
+            "default" : "1",
             "persist" : true
         },
         {
-            "name" : "SERVER_SSL",
-            "default" : "1",
+            "name" : "SERVER_ENCODING",
+            "default" : "gzip",
             "persist" : true
         },
         {
