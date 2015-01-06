@@ -3,8 +3,9 @@ MAINTAINER Hive Solutions
 
 ENV HOME /
 
+ENV SERVER {{ SERVER }}
+ENV SERVER_ENCODING {{ SERVER_ENCODING }}
 ENV SECRET {{ SECRET }}
-ENV SURL {{ SURL }}
 
 RUN apt-get update && apt-get install -y -q python python-setuptools wget rsync python-dev
 RUN easy_install pip && pip install flask quorum xhtml2pdf omni_api netius
