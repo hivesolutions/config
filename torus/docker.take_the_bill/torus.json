@@ -16,6 +16,11 @@
             "name" : "OMNI_OPEN_URL",
             "default" : "https://172.17.42.1/",
             "persist" : true
+        },
+        {
+            "name" : "SECRET",
+            "default" : "secret",
+            "persist" : true
         }
     ]
 }
