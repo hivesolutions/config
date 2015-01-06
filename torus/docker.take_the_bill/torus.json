@@ -24,7 +24,7 @@
         },
         {
             "name" : "TTB_SSL",
-            "default" : "1",
+            "default" : "0",
             "persist" : true
         },
         {
