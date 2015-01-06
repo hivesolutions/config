@@ -10,7 +10,7 @@ TTB_SSL=${TTB_SSL-1}
 SERVER_ENCODING=${SERVER_ENCODING-1}
 OMNI_URL=${OMNI_URL-http://172.17.42.1:8080/}
 OMNI_OPEN_URL=${OMNI_OPEN_URL-http://172.17.42.1:8080/}
-SECRET=${SECRET-}
+SECRET=${SECRET-secret}
 
 mkdir take_the_bill && cd take_the_bill
 wget https://github.com/hivesolutions/config/raw/master/docker/take_the_bill/Dockerfile.tpl -O Dockerfile.tpl
