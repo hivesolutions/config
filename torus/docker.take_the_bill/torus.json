@@ -8,13 +8,38 @@
     ],
     "config" : [
         {
+            "name" : "SERVER",
+            "default" : "netius",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_HOST",
+            "default" : "172.17.42.1",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_PORT",
+            "default" : "8080",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_SSL",
+            "default" : "1",
+            "persist" : true
+        },
+        {
+            "name" : "SERVER_ENCODING",
+            "default" : "gzip",
+            "persist" : true
+        }
+        {
             "name" : "OMNI_URL",
-            "default" : "https://172.17.42.1/",
+            "default" : "http://172.17.42.1:8080/",
             "persist" : true
         },
         {
             "name" : "OMNI_OPEN_URL",
-            "default" : "https://172.17.42.1/",
+            "default" : "http://172.17.42.1:8080/",
             "persist" : true
         },
         {
