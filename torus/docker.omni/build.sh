@@ -47,4 +47,4 @@ docker run \
 -e ALIAS_PATH=/.colony/meta/omni_assets_config/extra/alias.json \
 -p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT \
 -v /data:/data \
--i -t -d self/omni usr/local/bin/colony_wsgi
+-i -t -d self/omni
