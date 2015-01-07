@@ -2,8 +2,13 @@ FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
 ENV HOME /
+ENV HOST 0.0.0.0
+ENV PREFIX /mvc
+ENV ALIAS_PATH /.colony/meta/omni_assets_config/extra/alias.json
 
 ENV SERVER {{ SERVER }}
+ENV PORT {{ OMNI_PORT }}
+ENV SSL {{ OMNI_SSL }}
 ENV SERVER_ENCODING {{ SERVER_ENCODING }}
 ENV RUN_MODE {{ RUN_MODE }}
 ENV REPO_USERNAME {{ REPO_USERNAME }}

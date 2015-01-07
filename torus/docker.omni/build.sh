@@ -37,13 +37,4 @@ if [ "$DB_ENGINE" == "mysql" ]; then
     mysql -u$DB_USER -p$DB_PASSWORD -h$DB_HOST -e "CREATE SCHEMA IF NOT EXISTS $DB_NAME"
 fi
 
-docker run \
---name omni \
--e HOST=0.0.0.0 \
--e PORT=$OMNI_PORT \
--e SSL=$OMNI_SSL \
--e PREFIX=/mvc \
--e ALIAS_PATH=/.colony/meta/omni_assets_config/extra/alias.json \
--p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT \
--v /data:/data \
--i -t -d self/omni
+docker run --name omni -p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT -v /data:/data -i -t -d self/omni
