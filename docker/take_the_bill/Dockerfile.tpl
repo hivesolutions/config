@@ -12,7 +12,8 @@ ENV OMNI_URL {{ OMNI_URL }}
 ENV OMNI_OPEN_URL {{ OMNI_OPEN_URL }}
 ENV SECRET {{ SECRET }}
 
-RUN apt-get update && apt-get install -y -q python python-setuptools wget rsync python-dev
+RUN apt-get update && apt-get install -y -q python python-setuptools wget rsync python-dev \
+libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
 RUN easy_install pip && pip install flask quorum xhtml2pdf omni_api netius
 RUN pip install ttb --extra-index-url https://pypi.fury.io/{{ SECRET }}/hivesolutions/
 
