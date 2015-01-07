@@ -9,7 +9,7 @@
     "config" : [
         {
             "name" : "OMNI_DOMAIN",
-            "default" : "omni.host",
+            "default" : "host.frontdoorhd.com",
             "persist" : true
         },
         {
@@ -24,7 +24,7 @@
         },
         {
             "name" : "TTB_DOMAIN",
-            "default" : "ttb.host",
+            "default" : "host.takethebill.com",
             "persist" : true
         },
         {
