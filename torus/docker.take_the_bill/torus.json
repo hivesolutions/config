@@ -19,7 +19,7 @@
         },
         {
             "name" : "TTB_PORT",
-            "default" : "8080",
+            "default" : "8181",
             "persist" : true
         },
         {
@@ -39,7 +39,7 @@
         },
         {
             "name" : "OMNI_OPEN_URL",
-            "default" : "http://172.17.42.1:8080/",
+            "default" : "https://host.frontdoorhd.com/",
             "persist" : true
         },
         {
