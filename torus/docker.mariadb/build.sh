@@ -9,7 +9,7 @@ MARIADB_USERNAME=${MARIADB_USERNAME-admin}
 MARIADB_PASSWORD=${MARIADB_PASSWORD-admin}
 
 mkdir mariadb && cd mariadb
-wget https://github.com/hivesolutions/config/raw/master/docker/mariadb/Dockerfile.tpl -O Dockerfile.tpl
+wget https://github.com/hivesolutions/config/raw/master/docker/mariadb/Dockerfile.tpl
 context Dockerfile.tpl > Dockerfile && rm Dockerfile.tpl
 docker pull ubuntu && docker build --no-cache -t self/mariadb .
 cd .. && rm -rf mariadb
