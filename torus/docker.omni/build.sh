@@ -22,7 +22,7 @@ FS=${FS-/data/fs/default}
 SESSION_PATH=${SESSION_PATH-/data/session}
 
 mkdir omni && cd omni
-wget https://github.com/hivesolutions/config/raw/master/docker/omni/Dockerfile.tpl -O Dockerfile.tpl
+wget https://github.com/hivesolutions/config/raw/master/docker/omni/Dockerfile.tpl
 context Dockerfile.tpl > Dockerfile && rm Dockerfile.tpl
 wget https://github.com/hivesolutions/config/raw/master/colony/templates/colony.json.tpl
 context colony.json.tpl > colony.json && rm colony.json.tpl
