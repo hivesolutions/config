@@ -25,4 +25,4 @@ docker run \
 -e SSL=1 \
 -p 0.0.0.0:443:443 \
 -v /data:/data \
--i -t self/take_the_bill.proxy
+-i -t -d self/take_the_bill.proxy
