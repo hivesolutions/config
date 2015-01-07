@@ -16,4 +16,11 @@ context Dockerfile.tpl > Dockerfile && rm Dockerfile.tpl
 docker build --no-cache -t self/take_the_bill.proxy .
 cd .. && rm -rf take_the_bill.proxy
 
-docker run --name redis -p $REDIS_HOST:$REDIS_PORT:$REDIS_PORT -v /data:/data -i -t -d self/redis
+docker run \
+--name proxy \
+-e HOST=0.0.0.0 \
+-e PORT=443 \
+-e SSL=1 \
+-p 0.0.0.0:443:443 \
+-v /data:/data \
+-i -t self/take_the_bill.proxy
