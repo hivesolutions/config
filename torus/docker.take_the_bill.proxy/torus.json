@@ -8,13 +8,33 @@
     ],
     "config" : [
         {
-            "name" : "REDIS_HOST",
+            "name" : "OMNI_DOMAIN",
+            "default" : "omni.host",
+            "persist" : true
+        },
+        {
+            "name" : "OMNI_HOST",
             "default" : "172.17.42.1",
             "persist" : true
         },
         {
-            "name" : "REDIS_PORT",
-            "default" : "6379",
+            "name" : "OMNI_PORT",
+            "default" : "8080",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_DOMAIN",
+            "default" : "ttb.host",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_HOST",
+            "default" : "172.17.42.1",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_PORT",
+            "default" : "8181",
             "persist" : true
         }
     ]
