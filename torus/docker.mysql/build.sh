@@ -9,7 +9,7 @@ MYSQL_USERNAME=${MYSQL_USERNAME-admin}
 MYSQL_PASSWORD=${MYSQL_PASSWORD-admin}
 
 mkdir mysql && cd mysql
-wget https://github.com/hivesolutions/config/raw/master/docker/mysql/Dockerfile.tpl -O Dockerfile.tpl
+wget https://github.com/hivesolutions/config/raw/master/docker/mysql/Dockerfile.tpl
 context Dockerfile.tpl > Dockerfile && rm Dockerfile.tpl
 docker pull ubuntu && docker build --no-cache -t self/mysql .
 cd .. && rm -rf mysql
