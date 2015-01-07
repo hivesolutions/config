@@ -12,6 +12,7 @@ ENV OMNI_URL {{ OMNI_URL }}
 ENV OMNI_OPEN_URL {{ OMNI_OPEN_URL }}
 ENV SECRET {{ SECRET }}
 
+RUN locale-gen en_US.UTF-8 pt_PT.UTF-8
 RUN apt-get update && apt-get install -y -q python python-setuptools wget rsync python-dev \
 libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
 RUN easy_install pip && pip install flask quorum xhtml2pdf omni_api netius
