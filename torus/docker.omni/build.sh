@@ -11,6 +11,8 @@ SERVER_ENCODING=${SERVER_ENCODING-gzip}
 RUN_MODE=${RUN_MODE-omni}
 REPO_USERNAME=${REPO_USERNAME-root}
 REPO_PASSWORD=${REPO_PASSWORD-root}
+GITHUB_USERNAME=${GITHUB_USERNAME-github}
+GITHUB_PASSWORD=${GITHUB_PASSWORD-github}
 DB_ENGINE=${DB_ENGINE-mysql}
 DB_HOST=${DB_HOST-172.17.42.1}
 DB_NAME=${DB_NAME-omni}
@@ -43,9 +45,11 @@ if [ "$BUILD_SCHEMA" != "0" ]; then
     migratore mark
 fi
 
-git clone --depth 1 git@github.com:hivesolutions/omni.git
-cd omni/migrations/base
-migratore upgrade
-cd ../../.. && rm -rf omni
+if [ "$GITHUB_USERNAME" != "github" ]; then
+    git clone --depth 1 "https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/hivesolutions/omni.git"
+    cd omni/migrations/base
+    migratore upgrade
+    cd ../../.. && rm -rf omni
+fi
 
 docker run --name omni -p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT -v /data:/data -i -t -d self/omni
