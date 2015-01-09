@@ -37,4 +37,15 @@ if [ "$DB_ENGINE" == "mysql" ]; then
     mysql -u$DB_USER -p$DB_PASSWORD -h$DB_HOST -e "CREATE SCHEMA IF NOT EXISTS $DB_NAME"
 fi
 
+pip install --upgrade migratore
+
+if [ "$BUILD_SCHEMA" != "0" ]; then
+    migratore mark
+fi
+
+git clone --depth 1 git@github.com:hivesolutions/omni.git
+cd omni/migrations/base
+migratore upgrade
+cd ../../.. && rm -rf omni
+
 docker run --name omni -p $OMNI_HOST:$OMNI_PORT:$OMNI_PORT -v /data:/data -i -t -d self/omni
