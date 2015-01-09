@@ -48,6 +48,16 @@
             "persist" : true
         },
         {
+            "name" : "GITHUB_USERNAME",
+            "default" : "github",
+            "persist" : true
+        },
+        {
+            "name" : "GITHUB_PASSWORD",
+            "default" : "github",
+            "persist" : true
+        },
+        {
             "name" : "DB_ENGINE",
             "default" : "mysql",
             "persist" : true
