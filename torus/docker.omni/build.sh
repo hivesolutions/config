@@ -39,7 +39,8 @@ if [ "$DB_ENGINE" == "mysql" ]; then
     mysql -u$DB_USER -p$DB_PASSWORD -h$DB_HOST -e "CREATE SCHEMA IF NOT EXISTS $DB_NAME"
 fi
 
-pip install --upgrade migratore
+apt-get install -y -q libmysqlclient-dev
+pip install --upgrade migratore mysql-python
 
 if [ "$BUILD_SCHEMA" != "0" ]; then
     migratore mark
