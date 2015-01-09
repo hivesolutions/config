@@ -33,13 +33,13 @@ cd .. && rm -rf omni
 
 mkdir -p /data/fs
 
+apt-get update
+
 if [ "$DB_ENGINE" == "mysql" ]; then
-    apt-get update
     apt-get -y install mysql-client
     mysql -u$DB_USER -p$DB_PASSWORD -h$DB_HOST -e "CREATE SCHEMA IF NOT EXISTS $DB_NAME"
 fi
 
-apt-get update
 apt-get install -y -q libmysqlclient-dev
 pip install --upgrade migratore mysql-python
 
