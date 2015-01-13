@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
+ENV HOME /
+
 ADD colony.json /colony.json
 
 RUN apt-get update && apt-get install -y -q python python-setuptools wget
