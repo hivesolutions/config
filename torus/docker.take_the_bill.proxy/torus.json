@@ -1,8 +1,8 @@
 {
     "build" : "build.sh",
     "destroy" : "destroy.sh",
-    "start" : "docker start proxy",
-    "stop" : "docker stop proxy",
+    "start" : "docker start take_the_bill.proxy",
+    "stop" : "docker stop take_the_bill.proxy",
     "depends" : [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ],

@@ -19,7 +19,7 @@ docker build --no-cache -t self/take_the_bill.proxy .
 cd .. && rm -rf take_the_bill.proxy
 
 docker run \
---name proxy \
+--name take_the_bill.proxy \
 -e HOST=0.0.0.0 \
 -e PORT=443 \
 -e SSL=1 \
