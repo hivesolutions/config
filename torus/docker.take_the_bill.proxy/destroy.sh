@@ -3,6 +3,6 @@
 
 set -e +h
 
-docker stop take_the_bill.proxy
-docker rm take_the_bill.proxy
+docker stop proxy
+docker rm proxy
 docker rmi self/take_the_bill.proxy
