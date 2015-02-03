@@ -28,6 +28,16 @@
             "persist" : true
         },
         {
+            "name" : "TTB_QUANTITY",
+            "default" : "0",
+            "persist" : true
+        },
+        {
+            "name" : "TTB_WEIGHT",
+            "default" : "1",
+            "persist" : true
+        },
+        {
             "name" : "SERVER_ENCODING",
             "default" : "gzip",
             "persist" : true
