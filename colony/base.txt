@@ -7,13 +7,14 @@ service_http_starter
 service_http_welcome
 nanger
 ssl_socket
+ssl_socket_upgrader
 normal_socket
 console_interface
 console_base
 authentication_python
 resources_manager
 resources_python
-resources_json
+resources_jso
 resources_autoloader
 printing_manager
 printing_binie
