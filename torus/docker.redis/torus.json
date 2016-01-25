@@ -1,21 +1,18 @@
 {
-    "build" : "build.sh",
-    "destroy" : "destroy.sh",
-    "start" : "docker start redis",
-    "stop" : "docker stop redis",
-    "depends" : [
+    "build": "build.sh",
+    "destroy": "destroy.sh",
+    "start": "docker start redis",
+    "stop": "docker stop redis",
+    "depends": [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ],
-    "config" : [
-        {
-            "name" : "REDIS_HOST",
-            "default" : "172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "REDIS_PORT",
-            "default" : "6379",
-            "persist" : true
-        }
-    ]
+    "config": [{
+        "name": "REDIS_HOST",
+        "default": "172.17.42.1",
+        "persist": true
+    }, {
+        "name": "REDIS_PORT",
+        "default": "6379",
+        "persist": true
+    }]
 }

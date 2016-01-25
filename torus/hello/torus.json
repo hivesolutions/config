@@ -1,11 +1,9 @@
 {
-    "build" : "build.sh",
-    "start" : "echo $MESSAGE",
-    "config" : [
-        {
-            "name" : "MESSAGE",
-            "default" : "Hello World",
-            "persist" : true
-        }
-    ]
+    "build": "build.sh",
+    "start": "echo $MESSAGE",
+    "config": [{
+        "name": "MESSAGE",
+        "default": "Hello World",
+        "persist": true
+    }]
 }

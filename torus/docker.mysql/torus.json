@@ -1,31 +1,26 @@
 {
-    "build" : "build.sh",
-    "destroy" : "destroy.sh",
-    "start" : "docker start mysql",
-    "stop" : "docker stop mysql",
-    "depends" : [
+    "build": "build.sh",
+    "destroy": "destroy.sh",
+    "start": "docker start mysql",
+    "stop": "docker stop mysql",
+    "depends": [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ],
-    "config" : [
-        {
-            "name" : "MYSQL_HOST",
-            "default" : "172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "MYSQL_PORT",
-            "default" : "3306",
-            "persist" : true
-        },
-        {
-            "name" : "MYSQL_USERNAME",
-            "default" : "admin",
-            "persist" : true
-        },
-        {
-            "name" : "MYSQL_PASSWORD",
-            "default" : "admin",
-            "persist" : true
-        }
-    ]
+    "config": [{
+        "name": "MYSQL_HOST",
+        "default": "172.17.42.1",
+        "persist": true
+    }, {
+        "name": "MYSQL_PORT",
+        "default": "3306",
+        "persist": true
+    }, {
+        "name": "MYSQL_USERNAME",
+        "default": "admin",
+        "persist": true
+    }, {
+        "name": "MYSQL_PASSWORD",
+        "default": "admin",
+        "persist": true
+    }]
 }

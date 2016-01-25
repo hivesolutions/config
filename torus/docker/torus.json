@@ -1,7 +1,7 @@
 {
-    "build" : "build.sh",
-    "destroy" : "destroy.sh",
-    "depends" : [
+    "build": "build.sh",
+    "destroy": "destroy.sh",
+    "depends": [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/utilis/torus.json"
     ]
 }

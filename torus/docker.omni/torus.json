@@ -1,106 +1,86 @@
 {
-    "build" : "build.sh",
-    "destroy" : "destroy.sh",
-    "start" : "docker start omni",
-    "stop" : "docker stop omni",
-    "depends" : [
+    "build": "build.sh",
+    "destroy": "destroy.sh",
+    "start": "docker start omni",
+    "stop": "docker stop omni",
+    "depends": [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ],
-    "config" : [
-        {
-            "name" : "SERVER",
-            "default" : "netius",
-            "persist" : true
-        },
-        {
-            "name" : "OMNI_HOST",
-            "default" : "172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "OMNI_PORT",
-            "default" : "8080",
-            "persist" : true
-        },
-        {
-            "name" : "OMNI_SSL",
-            "default" : "0",
-            "persist" : true
-        },
-        {
-            "name" : "SERVER_ENCODING",
-            "default" : "gzip",
-            "persist" : true
-        },
-        {
-            "name" : "RUN_MODE",
-            "default" : "omni",
-            "persist" : true
-        },
-        {
-            "name" : "REPO_USERNAME",
-            "default" : "root",
-            "persist" : true
-        },
-        {
-            "name" : "REPO_PASSWORD",
-            "default" : "root",
-            "persist" : true
-        },
-        {
-            "name" : "GITHUB_USERNAME",
-            "default" : "github",
-            "persist" : true
-        },
-        {
-            "name" : "GITHUB_PASSWORD",
-            "default" : "github",
-            "persist" : true
-        },
-        {
-            "name" : "DB_ENGINE",
-            "default" : "mysql",
-            "persist" : true
-        },
-        {
-            "name" : "DB_HOST",
-            "default" : "172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "DB_NAME",
-            "default" : "omni",
-            "persist" : true
-        },
-        {
-            "name" : "DB_USER",
-            "default" : "admin",
-            "persist" : true
-        },
-        {
-            "name" : "DB_PASSWORD",
-            "default" : "admin",
-            "persist" : true
-        },
-        {
-            "name" : "BUILD_SCHEMA",
-            "default" : "0",
-            "persist" : true
-        },
-        {
-            "name" : "REDISTOGO_URL",
-            "default" : "redis://172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "FS",
-            "default" : "/data/fs/default",
-            "persist" : true
-        },
-        {
-            "name" : "SESSION_PATH",
-            "default" : "/data/session",
-            "persist" : true
-        }
-    ]
+    "config": [{
+        "name": "SERVER",
+        "default": "netius",
+        "persist": true
+    }, {
+        "name": "OMNI_HOST",
+        "default": "172.17.42.1",
+        "persist": true
+    }, {
+        "name": "OMNI_PORT",
+        "default": "8080",
+        "persist": true
+    }, {
+        "name": "OMNI_SSL",
+        "default": "0",
+        "persist": true
+    }, {
+        "name": "SERVER_ENCODING",
+        "default": "gzip",
+        "persist": true
+    }, {
+        "name": "RUN_MODE",
+        "default": "omni",
+        "persist": true
+    }, {
+        "name": "REPO_USERNAME",
+        "default": "root",
+        "persist": true
+    }, {
+        "name": "REPO_PASSWORD",
+        "default": "root",
+        "persist": true
+    }, {
+        "name": "GITHUB_USERNAME",
+        "default": "github",
+        "persist": true
+    }, {
+        "name": "GITHUB_PASSWORD",
+        "default": "github",
+        "persist": true
+    }, {
+        "name": "DB_ENGINE",
+        "default": "mysql",
+        "persist": true
+    }, {
+        "name": "DB_HOST",
+        "default": "172.17.42.1",
+        "persist": true
+    }, {
+        "name": "DB_NAME",
+        "default": "omni",
+        "persist": true
+    }, {
+        "name": "DB_USER",
+        "default": "admin",
+        "persist": true
+    }, {
+        "name": "DB_PASSWORD",
+        "default": "admin",
+        "persist": true
+    }, {
+        "name": "BUILD_SCHEMA",
+        "default": "0",
+        "persist": true
+    }, {
+        "name": "REDISTOGO_URL",
+        "default": "redis://172.17.42.1",
+        "persist": true
+    }, {
+        "name": "FS",
+        "default": "/data/fs/default",
+        "persist": true
+    }, {
+        "name": "SESSION_PATH",
+        "default": "/data/session",
+        "persist": true
+    }]
 }

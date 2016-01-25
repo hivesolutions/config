@@ -1,61 +1,50 @@
 {
-    "build" : "build.sh",
-    "destroy" : "destroy.sh",
-    "start" : "docker start take_the_bill",
-    "stop" : "docker stop take_the_bill",
-    "depends" : [
+    "build": "build.sh",
+    "destroy": "destroy.sh",
+    "start": "docker start take_the_bill",
+    "stop": "docker stop take_the_bill",
+    "depends": [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ],
-    "config" : [
-        {
-            "name" : "SERVER",
-            "default" : "netius",
-            "persist" : true
-        },
-        {
-            "name" : "TTB_HOST",
-            "default" : "172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "TTB_PORT",
-            "default" : "8181",
-            "persist" : true
-        },
-        {
-            "name" : "TTB_SSL",
-            "default" : "0",
-            "persist" : true
-        },
-        {
-            "name" : "TTB_QUANTITY",
-            "default" : "0",
-            "persist" : true
-        },
-        {
-            "name" : "TTB_WEIGHT",
-            "default" : "1",
-            "persist" : true
-        },
-        {
-            "name" : "SERVER_ENCODING",
-            "default" : "gzip",
-            "persist" : true
-        },
-        {
-            "name" : "OMNI_URL",
-            "default" : "http://172.17.42.1:8080/",
-            "persist" : true
-        },
-        {
-            "name" : "OMNI_OPEN_URL",
-            "default" : "https://host.frontdoorhd.com/",
-            "persist" : true
-        },
-        {
-            "name" : "SECRET",
-            "default" : "secret",
-            "persist" : true
-        }
-    ]
+    "config": [{
+        "name": "SERVER",
+        "default": "netius",
+        "persist": true
+    }, {
+        "name": "TTB_HOST",
+        "default": "172.17.42.1",
+        "persist": true
+    }, {
+        "name": "TTB_PORT",
+        "default": "8181",
+        "persist": true
+    }, {
+        "name": "TTB_SSL",
+        "default": "0",
+        "persist": true
+    }, {
+        "name": "TTB_QUANTITY",
+        "default": "0",
+        "persist": true
+    }, {
+        "name": "TTB_WEIGHT",
+        "default": "1",
+        "persist": true
+    }, {
+        "name": "SERVER_ENCODING",
+        "default": "gzip",
+        "persist": true
+    }, {
+        "name": "OMNI_URL",
+        "default": "http://172.17.42.1:8080/",
+        "persist": true
+    }, {
+        "name": "OMNI_OPEN_URL",
+        "default": "https://host.frontdoorhd.com/",
+        "persist": true
+    }, {
+        "name": "SECRET",
+        "default": "secret",
+        "persist": true
+    }]
 }

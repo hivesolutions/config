@@ -1,31 +1,26 @@
 {
-    "build" : "build.sh",
-    "destroy" : "destroy.sh",
-    "start" : "docker start mariadb",
-    "stop" : "docker stop mariadb",
-    "depends" : [
+    "build": "build.sh",
+    "destroy": "destroy.sh",
+    "start": "docker start mariadb",
+    "stop": "docker stop mariadb",
+    "depends": [
         "https://raw.githubusercontent.com/hivesolutions/config/master/torus/docker/torus.json"
     ],
-    "config" : [
-        {
-            "name" : "MARIADB_HOST",
-            "default" : "172.17.42.1",
-            "persist" : true
-        },
-        {
-            "name" : "MARIADB_PORT",
-            "default" : "3306",
-            "persist" : true
-        },
-        {
-            "name" : "MARIADB_USERNAME",
-            "default" : "admin",
-            "persist" : true
-        },
-        {
-            "name" : "MARIADB_PASSWORD",
-            "default" : "admin",
-            "persist" : true
-        }
-    ]
+    "config": [{
+        "name": "MARIADB_HOST",
+        "default": "172.17.42.1",
+        "persist": true
+    }, {
+        "name": "MARIADB_PORT",
+        "default": "3306",
+        "persist": true
+    }, {
+        "name": "MARIADB_USERNAME",
+        "default": "admin",
+        "persist": true
+    }, {
+        "name": "MARIADB_PASSWORD",
+        "default": "admin",
+        "persist": true
+    }]
 }
