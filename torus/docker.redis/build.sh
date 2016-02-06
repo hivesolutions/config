@@ -3,7 +3,7 @@
 
 set -e +h
 
-REDIS_HOST=${REDIS_HOST-172.17.42.1}
+REDIS_HOST=${REDIS_HOST-172.17.0.1}
 REDIS_PORT=${REDIS_PORT-6379}
 
 mkdir redis && cd redis
