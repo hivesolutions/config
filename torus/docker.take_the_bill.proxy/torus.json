@@ -12,7 +12,7 @@
         "persist": true
     }, {
         "name": "OMNI_HOST",
-        "default": "172.17.42.1",
+        "default": "172.17.0.1",
         "persist": true
     }, {
         "name": "OMNI_PORT",
@@ -24,7 +24,7 @@
         "persist": true
     }, {
         "name": "TTB_HOST",
-        "default": "172.17.42.1",
+        "default": "172.17.0.1",
         "persist": true
     }, {
         "name": "TTB_PORT",
