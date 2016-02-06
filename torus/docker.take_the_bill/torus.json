@@ -12,7 +12,7 @@
         "persist": true
     }, {
         "name": "TTB_HOST",
-        "default": "172.17.42.1",
+        "default": "172.17.0.1",
         "persist": true
     }, {
         "name": "TTB_PORT",
@@ -36,7 +36,7 @@
         "persist": true
     }, {
         "name": "OMNI_URL",
-        "default": "http://172.17.42.1:8080/",
+        "default": "http://172.17.0.1:8080/",
         "persist": true
     }, {
         "name": "OMNI_OPEN_URL",
