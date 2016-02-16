@@ -19,14 +19,15 @@ if __name__ == "__main__":
     nodes = tuple(nodes)
 
     if AUTH_PASSWORD: auth = netius.SimpleAuth(password = AUTH_PASSWORD)
-    else: auth = netius.AllowAuth()
+    else: auth = None
 
     regex = (
         (re.compile(r"https://*"), nodes),
     )
     auth_regex = (
-        (re.compile(r"https://cert\.*"), None),
-        (re.compile(r"https://pass\.*"), auth),
+        (re.compile(r"https://cert*"), None),
+        (re.compile(r"https://pass*"), auth),
+        (re.compile(r"https://[^/]+/omni*"), None),
         (re.compile(r"https://*"), None)
     )
     server = netius.extra.ReverseProxyServer(regex = regex, auth_regex = auth_regex)
