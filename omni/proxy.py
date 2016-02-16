@@ -24,7 +24,7 @@ if __name__ == "__main__":
     regex = (
         (re.compile(r"https://*"), nodes),
     )
-    auth_regex =  = (
+    auth_regex = (
         (re.compile(r"https://cert\.*"), netius.AllowAuth()),
         (re.compile(r"https://pass\.*"), auth),
         (re.compile(r"https://*") netius.AllowAuth())
