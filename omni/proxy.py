@@ -6,7 +6,7 @@ import re
 import netius.extra
 
 BASE_PORT = netius.conf("BASE_PORT", 8080, cast = int)
-NUMBER_PROCESSES = netius.conf("NUMBER_PROCESSES", 16, cast = int)
+NUMBER_PROCESSES = netius.conf("NUMBER_PROCESSES", 8, cast = int)
 NODE_TEMPLATE = netius.conf("NODE_TEMPLATE", "http://172.17.0.1:%d")
 
 if __name__ == "__main__":
