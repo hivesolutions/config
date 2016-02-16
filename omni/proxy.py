@@ -13,7 +13,7 @@ if __name__ == "__main__":
     nodes = []
 
     for port in range(BASE_PORT, BASE_PORT + NUMBER_PROCESSES):
-        api_nodes.append(NODE_TEMPLATE % port)
+        nodes.append(NODE_TEMPLATE % port)
 
     regex = (
         (re.compile(r"https://*"), nodes),
