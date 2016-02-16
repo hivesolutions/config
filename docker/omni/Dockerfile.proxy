@@ -1,13 +1,12 @@
-FROM ubuntu:wily
+FROM hivesolutions/alpine_dev:latest
 MAINTAINER Hive Solutions
 
 ENV HOME /
 
 ADD colony.json /colony.json
 
-RUN apt-get update && apt-get install -y -q python python-setuptools wget
-RUN easy_install pip && pip install netius colony
+RUN pip3 install netius colony
 RUN cpm install omni_assets
 RUN wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
 
-ENTRYPOINT ["usr/bin/python", "proxy.py"]
+ENTRYPOINT ["/usr/bin/python3", "/proxy.py"]
