@@ -27,7 +27,7 @@ if __name__ == "__main__":
     auth_regex = (
         (re.compile(r"https://cert\.*"), netius.AllowAuth()),
         (re.compile(r"https://pass\.*"), auth),
-        (re.compile(r"https://*") netius.AllowAuth())
+        (re.compile(r"https://*"), netius.AllowAuth())
     )
     server = netius.extra.ReverseProxyServer(regex = regex)
     server.serve(env = True)
