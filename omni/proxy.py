@@ -15,6 +15,8 @@ if __name__ == "__main__":
     for port in range(BASE_PORT, BASE_PORT + NUMBER_PROCESSES):
         nodes.append(NODE_TEMPLATE % port)
 
+    nodes = tuple(nodes)
+
     regex = (
         (re.compile(r"https://*"), nodes),
     )
