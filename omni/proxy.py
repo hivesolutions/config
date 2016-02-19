@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     if AUTH_PASSWORD: auth = netius.SimpleAuth(password = AUTH_PASSWORD)
     else: auth = None
-    address_auth = netius.AddressAuth(AUTH_ADDRESSES)
+    auth_address = netius.AddressAuth(AUTH_ADDRESSES)
 
     regex = (
         (re.compile(r"https://*"), nodes),
