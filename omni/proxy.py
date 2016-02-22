@@ -21,14 +21,18 @@ if __name__ == "__main__":
 
     if AUTH_PASSWORD: auth = netius.SimpleAuth(password = AUTH_PASSWORD)
     else: auth = None
-    auth_address = netius.AddressAuth(AUTH_ADDRESSES)
+    if AUTH_ADDRESSES: auth_address = netius.AddressAuth(AUTH_ADDRESSES)
+    else: auth_address
+
+    if auth or auth_address: auth_tuple = (auth, auth_address)
+    else: auth_tuple = None
 
     regex = (
         (re.compile(r"https://*"), nodes),
     )
     auth_regex = (
         (re.compile(r"https://[^/]+/omni/*"), None),
-        (re.compile(r"https://*"), (auth, auth_address))
+        (re.compile(r"https://*"), auth_tuple)
     )
     server = netius.extra.ReverseProxyServer(regex = regex, auth_regex = auth_regex)
     server.serve(env = True)
