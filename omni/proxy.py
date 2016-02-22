@@ -18,13 +18,16 @@ if __name__ == "__main__":
         nodes.append(NODE_TEMPLATE % port)
 
     nodes = tuple(nodes)
+    auth_tuple = []
 
-    if AUTH_PASSWORD: auth = netius.SimpleAuth(password = AUTH_PASSWORD)
-    else: auth = None
+    if AUTH_PASSWORD: auth_password = netius.SimpleAuth(password = AUTH_PASSWORD)
+    else: auth_password = None
     if AUTH_ADDRESSES: auth_address = netius.AddressAuth(AUTH_ADDRESSES)
     else: auth_address = None
-    if auth or auth_address: auth_tuple = (auth, auth_address)
-    else: auth_tuple = None
+
+    if auth_password: auth_tuple.append(auth_password)
+    if auth_address: auth_tuple.append(auth_address)
+    auth_tuple = tuple(auth_tuple) if auth_tuple else None
 
     regex = (
         (re.compile(r"https://*"), nodes),
