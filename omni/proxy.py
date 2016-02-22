@@ -22,8 +22,7 @@ if __name__ == "__main__":
     if AUTH_PASSWORD: auth = netius.SimpleAuth(password = AUTH_PASSWORD)
     else: auth = None
     if AUTH_ADDRESSES: auth_address = netius.AddressAuth(AUTH_ADDRESSES)
-    else: auth_address
-
+    else: auth_address = None
     if auth or auth_address: auth_tuple = (auth, auth_address)
     else: auth_tuple = None
 
