@@ -12,4 +12,4 @@ RUN apk update && apk add dhcp
 RUN ln -s /etc/dhcp/config/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf
 RUN touch /var/lib/dhcp/dhcpd.leases
 
-CMD ["/usr/sbin/dhcpd", "-f", "-cf", "/etc/dhcp/dhcpd.conf"]
+CMD ["/usr/sbin/dhcpd", "-f", "-d", "-cf", "/etc/dhcp/dhcpd.conf"]
