@@ -2,8 +2,8 @@ FROM ubuntu:latest
 MAINTAINER Hive Solutions
 
 RUN apt-get update && apt-get install -y -q redis-server wget
-RUN wget https://github.com/hivesolutions/config/raw/master/redis/redis.conf && \
-wget https://github.com/hivesolutions/config/raw/master/redis/redis_link
+RUN wget https://github.com/hivesolutions/config/raw/master/redis/redis.conf &&\
+    wget https://github.com/hivesolutions/config/raw/master/redis/redis_link
 RUN chmod 755 redis_link
 RUN cp -R redis.conf etc/redis/redis.conf && rm redis.conf
 
