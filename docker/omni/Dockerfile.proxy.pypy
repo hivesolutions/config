@@ -1,12 +1,12 @@
-FROM hivesolutions/python:latest
+FROM hivesolutions/pypy:latest
 MAINTAINER Hive Solutions
 
 ENV HOME /
 
 ADD colony.json /colony.json
 
-RUN pip3 install netius hpack colony
+RUN pip install netius hpack colony
 RUN cpm install omni_assets
 RUN wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
 
-ENTRYPOINT ["/usr/bin/python3", "/proxy.py"]
+ENTRYPOINT ["/usr/bin/python", "/proxy.py"]
