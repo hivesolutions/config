@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+LABEL version="1.0"
 LABEL maintainer="Hive Solutions <development@hive.pt>"
 
 ENV MARIADB_HOST {{ MARIADB_HOST }}

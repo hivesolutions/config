@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+LABEL version="1.0"
 LABEL maintainer="Hive Solutions <development@hive.pt>"
 
 ENV MYSQL_HOST {{ MYSQL_HOST }}
