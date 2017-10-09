@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-MAINTAINER Hive Solutions
+
+LABEL maintainer="Hive Solutions <development@hive.pt>"
 
 RUN apt-get update && apt-get install -y -q software-properties-common
 RUN apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db

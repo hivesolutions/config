@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-MAINTAINER Hive Solutions
+
+LABEL maintainer="Hive Solutions <development@hive.pt>"
 
 ENV HOME /
 ENV HOST 0.0.0.0

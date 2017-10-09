@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-MAINTAINER Hive Solutions
+
+LABEL maintainer="Hive Solutions <development@hive.pt>"
 
 RUN apt-get update && apt-get install -y -q mysql-server pwgen wget
 RUN wget https://github.com/hivesolutions/config/raw/master/mysql/my.cnf && \
