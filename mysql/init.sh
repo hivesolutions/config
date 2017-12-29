@@ -1,6 +1,9 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
+mkdir -p /var/run/mysqld
+chmod 777 /var/run/mysqld
+
 /usr/bin/mysqld_safe > /dev/null 2>&1 &
 
 RET=1
