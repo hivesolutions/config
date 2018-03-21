@@ -32,6 +32,7 @@ regex = (
     (re.compile(r"https://*"), nodes),
 )
 auth_regex = (
+    (re.compile(r"https://[^/]+/api/*"), None),
     (re.compile(r"https://[^/]+/omni/*"), None),
     (re.compile(r"https://*"), auth_tuple)
 )
