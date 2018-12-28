@@ -15,6 +15,6 @@ ENV TTB_PORT {{ TTB_PORT }}
 ADD proxy.py /proxy.py
 
 RUN apt-get update && apt-get install -y -q python python-setuptools wget
-RUN easy_install pip && pip install netius
+RUN pip install netius
 
 ENTRYPOINT ["usr/bin/python", "proxy.py"]
