@@ -14,5 +14,8 @@ if [ ! -L /data/mysql ]; then
 
 fi
 
-exec /usr/bin/mysqld_safe "$@"
+trap 'kill -s SIGTERM $PID; for child in $(ps -o pid= --ppid $PID); do kill -s SIGTERM $child; done; wait $PID' TERM INT
+/usr/bin/mysqld_safe "$@" &
+PID=$!
+wait $PID
 exit $?
