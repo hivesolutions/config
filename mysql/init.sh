@@ -4,7 +4,7 @@
 mkdir -p /var/run/mysqld
 chmod 777 /var/run/mysqld
 
-/usr/bin/mysqld_safe > /dev/null 2>&1 &
+/usr/bin/mysqld_safe &
 
 RET=1
 while [[ $RET -ne 0 ]]; do
