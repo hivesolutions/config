@@ -4,7 +4,7 @@
 mkdir -p /var/run/mysqld
 chmod 777 /var/run/mysqld
 
-/usr/bin/mysqld_safe
+/usr/bin/mysqld_safe --skip-syslog
 
 RET=1
 while [[ $RET -ne 0 ]]; do
