@@ -1,6 +1,9 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
+usermod -u 105 mysql
+groupmod -g 106 mysql
+
 if [ ! -L /data/mysql ]; then
 	echo "Found a '/data/mysql' installation..."
 
