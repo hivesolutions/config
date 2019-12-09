@@ -4,13 +4,13 @@
 mkdir -p /var/run/mysqld
 chmod 777 /var/run/mysqld
 
-/usr/bin/mysqld_safe &
+/usr/bin/mysqld_safe > /dev/null 2>&1 &
 
 RET=1
 while [[ $RET -ne 0 ]]; do
     echo "=> Waiting for confirmation of MySQL service startup ($RET)"
     sleep 5
-    mysql -uroot -h127.0.0.1 -e "status"
+    mysql -uroot -hlocalhost -e "status" > /dev/null 2>&1
     RET=$?
 done
 
@@ -24,8 +24,8 @@ else
     echo "=> Using provided MySQL user ($USER) and password"
 fi
 
-mysql -uroot -h127.0.0.1 -e "CREATE USER '$USER'@'%' IDENTIFIED BY '$PASS'"
-mysql -uroot -h127.0.0.1 -e "GRANT ALL PRIVILEGES ON *.* TO '$USER'@'%' WITH GRANT OPTION"
+mysql -uroot -hlocalhost -e "CREATE USER '$USER'@'%' IDENTIFIED BY '$PASS'"
+mysql -uroot -hlocalhost -e "GRANT ALL PRIVILEGES ON *.* TO '$USER'@'%' WITH GRANT OPTION"
 
 echo "=> Done!"
 
