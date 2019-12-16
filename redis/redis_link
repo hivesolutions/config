@@ -12,5 +12,8 @@ if [ ! -L /data/redis ]; then
 
 fi
 
-exec /usr/bin/redis-server "$@"
+trap 'kill -s SIGTERM $PID; for child in $(ps -o pid= --ppid $PID); do kill -s SIGTERM $child; done; wait $PID' TERM INT
+/usr/bin/redis-server "$@"
+PID=$!
+wait $PID
 exit $?
