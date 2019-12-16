@@ -4,7 +4,7 @@
 if [ ! -L /data/redis ]; then
 
     if [ ! -d /data/redis ]; then
-        mkdir /data/redis
+        mkdir -p /data/redis
     fi
 
     rm -rf /var/lib/redis
