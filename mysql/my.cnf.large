@@ -33,7 +33,7 @@ thread_stack              = 192K
 query_cache_type          = 0
 query_cache_limit         = 64M
 query_cache_size          = 256M
-innodb_buffer_pool_size   = 24576M
+innodb_buffer_pool_size   = 16384M
 innodb_thread_concurrency = 16
 innodb_file_per_table
 read_rnd_buffer_size      = 256M
