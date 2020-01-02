@@ -7,7 +7,7 @@ ENV HOME /
 
 ADD colony.json /colony.json
 
-RUN pip install netius hpack colony
+RUN pip install "netius<1.17.0" hpack colony
 RUN cpm install omni_assets
 RUN wget https://github.com/hivesolutions/config/raw/master/omni/proxy.py
 
