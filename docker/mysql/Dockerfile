@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 
 LABEL version="1.0"
 LABEL maintainer="Hive Solutions <development@hive.pt>"
