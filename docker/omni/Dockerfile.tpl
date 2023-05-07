@@ -29,7 +29,7 @@ ADD colony.json /colony.json
 
 RUN apt-get update && apt-get install -y -q python python-pip python-setuptools wget rsync \
     python-dev libmysqlclient-dev libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev libffi-dev \
-    libssl-dev
+    libssl-dev libcairo2-dev
 RUN pip install colony mysql-python redis pillow reportlab qrcode pycrypto pytz pushi netius
 RUN wget https://github.com/hivesolutions/config/raw/master/colony/base.txt && \
     wget https://github.com/hivesolutions/config/raw/master/colony/omni.txt
