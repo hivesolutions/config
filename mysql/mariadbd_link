@@ -1,6 +1,8 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
+set -e +h
+
 usermod -u 105 mysql
 groupmod -g 106 mysql
 

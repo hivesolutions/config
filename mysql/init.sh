@@ -1,6 +1,8 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
 
+set -e +h
+
 mkdir -p /var/run/mysqld
 chmod 777 /var/run/mysqld
 
