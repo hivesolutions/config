@@ -27,13 +27,13 @@ collation-server          = utf8_bin
 init-connect              = 'SET NAMES utf8'
 interactive_timeout       = 172800
 wait_timeout              = 172800
-key_buffer_size           = 4096M
+key_buffer_size           = 6144M
 max_allowed_packet        = 2048M
 thread_stack              = 192K
 query_cache_type          = 0
-query_cache_limit         = 128M
-query_cache_size          = 512M
-innodb_buffer_pool_size   = 32768M
+query_cache_limit         = 246M
+query_cache_size          = 1024M
+innodb_buffer_pool_size   = 49152M
 innodb_thread_concurrency = 16
 innodb_file_per_table
 read_rnd_buffer_size      = 512M
