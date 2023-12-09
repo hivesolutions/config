@@ -4,7 +4,7 @@
 mkdir -p /var/run/mysqld
 chmod 777 /var/run/mysqld
 
-mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
 /usr/bin/mariadbd-safe > /dev/null 2>&1 &
 

@@ -7,7 +7,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q pwgen
 RUN wget https://github.com/hivesolutions/config/raw/master/mysql/my.cnf.large -O my.cnf && \
     wget https://github.com/hivesolutions/config/raw/master/mysql/init_maria.sh -O init.sh && \
     wget https://github.com/hivesolutions/config/raw/master/mysql/mariadbd_link
-RUN chmod 755 mysqld_link && chmod 755 *.sh
+RUN chmod 755 mariadbd_link && chmod 755 *.sh
 RUN cp -R my.cnf etc/mysql/my.cnf && rm my.cnf
 RUN ./init.sh && rm init.sh
 
