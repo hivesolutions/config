@@ -1,0 +1,30 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+
+usermod -u 105 mysql
+groupmod -g 106 mysql
+
+if [ ! -L /data/mysql ]; then
+	echo "Found a '/data/mysql' installation..."
+
+    if [ ! -d /data/mysql ]; then
+    	echo "'/data/mysql' is empty, populating..." 
+
+        mkdir -p /data/mysql
+        chown mysql:mysql /data/mysql
+        cp -rp /var/lib/mysql/* /data/mysql
+    fi
+
+	echo "Removing '/var/lib/mysql' and linking '/data/mysql'..."
+
+    rm -rf /var/lib/mysql
+    ln -s /data/mysql /var/lib/mysql
+
+    echo "Finished '/data/mysql changes'"
+fi
+
+trap 'kill -s SIGTERM $PID; for child in $(ps -o pid= --ppid $PID); do kill -s SIGTERM $child; done; wait $PID' TERM INT
+/usr/bin/mariadbd-safe "$@" &
+PID=$!
+wait $PID
+exit $?
