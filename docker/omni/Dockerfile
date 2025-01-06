@@ -10,7 +10,7 @@ ADD colony.json /colony.json
 RUN apt-get update && apt-get install -y -q gcc python python-pip python-setuptools wget rsync\
     python-dev libmysqlclient-dev libjpeg-dev libfreetype6-dev zlib1g-dev libpng-dev libffi-dev\
     libssl-dev libcairo2-dev
-RUN pip install colony mysql-python redis kafka-python pillow reportlab qrcode pycrypto pytz pushi\
+RUN pip install colony mysql-python redis kafka-python "pillow<7" reportlab "qrcode<8" pycrypto pytz pushi\
     netius "elasticsearch<8"
 RUN wget https://github.com/hivesolutions/config/raw/master/colony/base.txt &&\
     wget https://github.com/hivesolutions/config/raw/master/colony/omni.txt
