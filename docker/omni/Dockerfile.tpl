@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y -q python python-pip python-setuptools 
     python-dev libmysqlclient-dev libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev libffi-dev \
     libssl-dev libcairo2-dev
 RUN pip install colony mysql-python redis kafka-python "pillow<7" reportlab "qrcode<8" pycrypto pytz pushi\
-    netius "elasticsearch<8"
+    netius "elasticsearch<8" mailme-api colony-print-api
 RUN wget https://github.com/hivesolutions/config/raw/master/colony/base.txt && \
     wget https://github.com/hivesolutions/config/raw/master/colony/omni.txt
 RUN cpm require base.txt omni.txt && rm base.txt omni.txt
