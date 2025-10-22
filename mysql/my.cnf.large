@@ -40,8 +40,6 @@ read_rnd_buffer_size      = 512M
 max_binlog_size           = 200M
 expire_logs_days          = 10
 
-innodb_force_recovery     = 1
-
 [mysqldump]
 quick
 quote-names
